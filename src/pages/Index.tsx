@@ -14,48 +14,13 @@ import RetroGameVideos from "@/components/RetroGameVideos";
 import { useEffect } from "react";
 
 const Index = () => {
-  // Add startup animations and sounds
   useEffect(() => {
-    // Add CSS class to body for global arcade styling
     document.body.classList.add('arcade-theme');
-    
-    // Optional: Play arcade startup sound
-    const playStartupSound = () => {
-      try {
-        const audio = new Audio('https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg');
-        audio.volume = 0.2;
-        audio.play();
-      } catch (e) {
-        console.log('Audio autoplay blocked');
-      }
-    };
-    
-    // Try to play sound on user interaction
-    const handleFirstInteraction = () => {
-      playStartupSound();
-      document.removeEventListener('click', handleFirstInteraction);
-    };
-    
-    document.addEventListener('click', handleFirstInteraction);
-    
-    return () => {
-      document.body.classList.remove('arcade-theme');
-      document.removeEventListener('click', handleFirstInteraction);
-    };
+    return () => document.body.classList.remove('arcade-theme');
   }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-game4all-dark to-black text-white relative">
-      {/* SVG Filters for CRT effects - reduced intensity */}
-      <svg className="hidden">
-        <filter id="pixelate-5">
-          <feFlood x="4" y="4" height="2" width="2"/>
-          <feComposite width="10" height="10"/>
-          <feTile result="a"/>
-          <feComposite in="SourceGraphic" in2="a" operator="in"/>
-          <feMorphology operator="dilate" radius="3"/>
-        </filter>
-      </svg>
       
       {/* Logo background */}
       <div className="logo-background"></div>

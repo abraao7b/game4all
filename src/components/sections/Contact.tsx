@@ -197,22 +197,10 @@ const Contact = () => {
             
             <div className="bg-gradient-to-r from-game4all-purple/20 to-game4all-pink/20 backdrop-blur-sm border border-game4all-pink/30 rounded-lg p-6">
               <h3 className="font-arcade text-xl text-white mb-4">Atendemos em toda região:</h3>
-              <ul className="grid grid-cols-2 gap-2 text-gray-300">
+              <ul className="text-gray-300">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-game4all-purple"></span>
-                  <span>São Paulo - SP</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-game4all-blue"></span>
-                  <span>Guarulhos - SP</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-game4all-pink"></span>
-                  <span>Osasco - SP</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-game4all-purple"></span>
-                  <span>ABC - SP</span>
+                  <span>Região do Vale do Ribeira</span>
                 </li>
               </ul>
             </div>
@@ -220,8 +208,20 @@ const Contact = () => {
         </div>
       </div>
       
-      {/* Botão de whatsapp fixo - REDUCED SIZE */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* Botões fixos - WhatsApp e Voltar ao Topo */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        {/* Botão de voltar ao topo */}
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center justify-center w-12 h-12 bg-game4all-blue/80 hover:bg-game4all-blue text-white rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-110"
+          title="Voltar ao topo"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+        
+        {/* Botão de whatsapp */}
         <a 
           href="https://wa.me/SEUNUMEROAQUI" 
           target="_blank" 

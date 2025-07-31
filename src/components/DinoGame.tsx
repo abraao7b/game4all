@@ -140,7 +140,7 @@ const DinoGame: React.FC<{ onScore: (score: number) => void }> = ({ onScore }) =
       
       // Display score
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = '16px "Press Start 2P", monospace';
+      ctx.font = '16px "Quicksand", sans-serif';
       ctx.fillText(`Score: ${currentScore}`, canvas.width - 200, 30);
       ctx.fillText(`High: ${Math.max(highScore, currentScore)}`, canvas.width - 200, 60);
       

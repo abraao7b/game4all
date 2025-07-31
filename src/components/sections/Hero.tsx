@@ -21,6 +21,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Conteúdo do cabeçalho */}
           <div className="lg:w-1/2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight text-white mb-6">
               <span className="font-arcade text-game4all-purple block mb-2">Game4All</span>
@@ -31,27 +32,11 @@ const Hero = () => {
               Fliperamas retrô, Jukebox e Karaokê exclusivos para alugar em festas, eventos e encontros. Uma experiência única para todas as idades!
             </p>
             
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg"
-                className="bg-game4all-purple hover:bg-game4all-blue text-white font-sans py-3 px-8 rounded-xl shadow-[0_0_15px_rgba(155,135,245,0.4)] transition-all hover:shadow-[0_0_20px_rgba(51,195,240,0.6)]"
-              >
-                <Gamepad className="mr-2" />
-                Solicitar Orçamento
-              </Button>
-              
-              <Button 
-                variant="outline"
-                size="lg" 
-                className="border-game4all-blue text-game4all-blue hover:bg-game4all-blue/10 font-sans py-3 px-8 rounded-xl"
-              >
-                Ver Equipamentos
-              </Button>
-            </div>
+            
           </div>
-          
-          <div className="lg:w-1/2 flex justify-center">
-            {/* Realistic Arcade Cabinet */}
+
+          {/* Mini Fliperama do Dino */}
+          <div className="lg:w-1/2 flex justify-center lg:justify-end pt-16">
             <div className="relative arcade-cabinet">
               {/* Cabinet outer frame */}
               <div className="w-80 md:w-96 bg-game4all-dark rounded-t-xl pt-5 pb-10 px-2 shadow-[0_10px_25px_rgba(0,0,0,0.5)] border-t-4 border-x-4 border-[#333] relative">
@@ -61,7 +46,7 @@ const Hero = () => {
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDUgTCAyMCA1IE0gNSAwIEwgNSAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPjwvc3ZnPg==')] opacity-30"></div>
                   </div>
                   <h3 className="font-arcade text-xl text-game4all-purple animate-pulse z-10">
-                    GAME<span className="text-game4all-blue">4</span><span className="text-game4all-pink">ALL</span>
+                    DINO<span className="text-game4all-blue">GAME</span>
                   </h3>
                 </div>
                 

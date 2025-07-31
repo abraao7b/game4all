@@ -24,7 +24,7 @@ const About = () => {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="glass-container p-6 rounded-xl mb-6">
               <p className="text-white/90 text-lg leading-relaxed font-sans">
-                Somos David, Abraao, Kaiky e Thaynara, estudantes do curso Técnico em Manutenção e 
+                Somos David, Abraão, Kaiky e Thaynara, estudantes do curso Técnico em Manutenção e 
                 Suporte em Informática com foco em hardware e redes.
               </p>
               <p className="text-white/90 text-lg leading-relaxed font-sans mt-4">
@@ -61,14 +61,22 @@ const About = () => {
               
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { name: "David", color: "purple" },
-                  { name: "Abraoo", color: "blue" },
-                  { name: "Kaiky", color: "pink" },
-                  { name: "Thaynara", color: "green" }
+                  { name: "David", color: "purple", image: "/lovable-uploads/137e7ada-2bc2-4ef8-a4ce-1e0591b78b02.png" },
+                  { name: "Abraão", color: "blue", image: "/lovable-uploads/aaa566ba-2153-418e-be9c-92dfdf220b24.png" },
+                  { name: "Kaiky", color: "pink", image: "/lovable-uploads/5fffff11-390c-4ada-ac04-dbf72565ee5f.png" },
+                  { name: "Thaynara", color: "green", image: "/lovable-uploads/6a586dc5-e926-4ab1-a9c6-5cfcb4de643c.png" }
                 ].map((member, index) => (
                   <div key={index} className="text-center">
                     <div className={`w-20 h-20 mx-auto rounded-full bg-game4all-dark/60 border-2 border-game4all-${member.color} mb-3 flex items-center justify-center overflow-hidden`}>
-                      <div className="text-3xl">{member.name.charAt(0)}</div>
+                      {member.image ? (
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="text-3xl">{member.name.charAt(0)}</div>
+                      )}
                     </div>
                     <p className="font-sans font-medium text-white">{member.name}</p>
                     <p className="text-white/70 text-xs font-sans mt-1">Técnico em TI</p>
